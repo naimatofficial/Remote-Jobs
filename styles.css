@@ -1,7 +1,7 @@
 .rectangle {
 	position: absolute;
 	width: 80rem;
-	height: 49px;
+	height: 3rem;
 	left: 22px;
 	top: 256px;
 	background: #26c499;
@@ -13,4 +13,10 @@
 .card {
 	position: relative;
 	z-index: 2;
+}
+
+@media (max-width: 1500px) {
+	.d-lg-block svg {
+		display: none;
+	}
 }
