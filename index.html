@@ -18,6 +18,10 @@
 			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
 			crossorigin="anonymous"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
 		<link rel="stylesheet" href="./styles.css" />
 	</head>
 	<body>
@@ -77,10 +81,10 @@
 							<a class="nav-link" href="#about">About Us</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#about">Blog</a>
+							<a class="nav-link" href="#blog">Blog</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#about">Our Work</a>
+							<a class="nav-link" href="#step">Our Work</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#contact">Contact</a>
@@ -254,7 +258,7 @@
 		<!-- Form Section -->
 		<section
 			id="contact"
-			class="p-5 px-md-2"
+			class="p-5 px-md-2 position-relative"
 			style="
 				background: rgb(211, 255, 247);
 				background: linear-gradient(
@@ -263,13 +267,60 @@
 					rgba(255, 230, 254, 1) 37%,
 					rgba(224, 242, 254, 1) 63%
 				);
+				z-index: 999;
 			"
 		>
+			<div class="d-none d-lg-block">
+				<div class="position-absolute" style="top: 0%; left: 0; z-index: -1">
+					<svg
+						width="1518"
+						height="257"
+						viewBox="0 0 1440 257"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							opacity="0.1"
+							d="M1161.68 255.579C1480.47 234.772 1710.41 12.6117 1613.41 -4.85381C1516.41 -22.3193 -37.1912 -153.502 -37.1912 -153.502L-85.9996 234.505C0.130679 191.374 -26.0409 83.0552 246.175 26.6755C518.392 -29.7042 842.88 276.386 1161.68 255.579Z"
+							fill="url(#paint0_linear_958_7842)"
+						/>
+						<defs>
+							<linearGradient
+								id="paint0_linear_958_7842"
+								x1="790.697"
+								y1="-94.2816"
+								x2="762.835"
+								y2="295.223"
+								gradientUnits="userSpaceOnUse"
+							>
+								<stop stop-color="#26C499" />
+								<stop offset="1" stop-color="#407BFF" stop-opacity="0.37" />
+							</linearGradient>
+						</defs>
+					</svg>
+				</div>
+				<div class="position-absolute" style="top: 47.8%; left: 0">
+					<svg
+						width="841"
+						height="409"
+						viewBox="0 0 841 409"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							opacity="0.1"
+							d="M363 220.5C284.2 55.3001 56.8333 4.66674 -47 7.76314e-05L-47 461L841 502C714.5 477 441.8 385.7 363 220.5Z"
+							fill="#048682"
+						/>
+					</svg>
+				</div>
+			</div>
+
 			<div class="container">
 				<div
-					class="d-flex justify-content-between flex-column flex-md-row align-items-center gap-lg-5 gap-md-4"
+					class="d-flex pt-5 justify-content-end flex-column flex-md-row align-items-start gap-lg-5 gap-md-4"
 				>
-					<div class="col-lg-4 col-md-12">
+					<div class="col-lg-4 col-md-12 mt-5 py-4">
 						<h2 class="text-uppercase fw-bold">
 							Your are wise to 'look before you leap
 						</h2>
@@ -297,20 +348,21 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-8">
+					<div class="col-lg-6 col-md-12">
 						<div
 							style="
 								border-radius: 30% 1% 30% 1% / 30% 1% 30% 1%;
 								overflow: hidden;
 								border-top: 8px solid #34d399;
 								border-bottom: 8px solid #34d399;
+								z-index: 10;
 							"
 						>
 							<div
 								style="border-radius: inherit"
 								class="bg-light shadow-sm p-lg-5 p-4 px-5"
 							>
-								<h3 class="text-center mb-4 mt-2 text-uppercase fw-bold">
+								<h3 class="text-center mb-5 mt-2 text-uppercase fw-bold">
 									share your requirement
 								</h3>
 								<form class="py-2 px-5">
@@ -392,7 +444,6 @@
 		<section id="embedded" class="py-5 mt-5 mb-5">
 			<div class="container py-4 position-relative">
 				<!-- Rectangle -->
-				<div class="rectangle d-none d-lg-block"></div>
 				<div class="mb-5 services">
 					<h2 class="text-center mb-5 text-capitalize">
 						Our embedded architects Services
@@ -400,6 +451,7 @@
 					<div
 						class="d-flex flex-column flex-md-row gap-4 justify-content-center align-items-center"
 					>
+						<div class="rectangle d-none d-lg-block"></div>
 						<div
 							class="p-4 shadow-lg card"
 							style="
@@ -410,7 +462,12 @@
 								border-top: 5px solid #34d399;
 							"
 						>
-							<img src="/images/no-credit.png" alt="icon" width="80px" />
+							<div
+								class="shadow-lg p-4"
+								style="border-radius: 60px 8px; width: 80px; height: 80px"
+							>
+								<i class="fas fa-gear fa-lg"></i>
+							</div>
 							<p style="width: 100px" class="fw-semibold mt-2">
 								Perfomance Optimization
 							</p>
@@ -425,7 +482,12 @@
 								border-top: 5px solid #34d399;
 							"
 						>
-							<img src="/images/no-credit.png" alt="icon" width="80px" />
+							<div
+								class="shadow-lg p-4"
+								style="border-radius: 60px 8px; width: 80px; height: 80px"
+							>
+								<i class="fas fa-gear fa-lg"></i>
+							</div>
 							<p style="width: 100px" class="fw-semibold mt-2">
 								Perfomance Optimization
 							</p>
@@ -440,7 +502,12 @@
 								border-top: 5px solid #34d399;
 							"
 						>
-							<img src="/images/no-credit.png" alt="icon" width="80px" />
+							<div
+								class="shadow-lg p-4"
+								style="border-radius: 60px 8px; width: 80px; height: 80px"
+							>
+								<i class="fas fa-gear fa-lg"></i>
+							</div>
 							<p style="width: 100px" class="fw-semibold mt-2">
 								Perfomance Optimization
 							</p>
@@ -455,7 +522,12 @@
 								border-top: 5px solid #34d399;
 							"
 						>
-							<img src="/images/no-credit.png" alt="icon" width="80px" />
+							<div
+								class="shadow-lg p-4"
+								style="border-radius: 60px 8px; width: 80px; height: 80px"
+							>
+								<i class="fas fa-gear fa-lg"></i>
+							</div>
 							<p style="width: 100px" class="fw-semibold mt-2">
 								Perfomance Optimization
 							</p>
@@ -470,7 +542,12 @@
 								border-top: 5px solid #34d399;
 							"
 						>
-							<img src="/images/no-credit.png" alt="icon" width="80px" />
+							<div
+								class="shadow-lg p-4"
+								style="border-radius: 60px 8px; width: 80px; height: 80px"
+							>
+								<i class="fas fa-gear fa-lg"></i>
+							</div>
 							<p style="width: 100px" class="fw-semibold mt-2">
 								Perfomance Optimization
 							</p>
@@ -485,7 +562,59 @@
 								border-top: 5px solid #34d399;
 							"
 						>
-							<img src="/images/no-credit.png" alt="icon" width="80px" />
+							<div
+								class="shadow-lg p-4"
+								style="border-radius: 60px 8px; width: 80px; height: 80px"
+							>
+								<i class="fas fa-gear fa-lg"></i>
+							</div>
+							<p style="width: 100px" class="fw-semibold mt-2">
+								Perfomance Optimization
+							</p>
+						</div>
+					</div>
+					<!-- second row -->
+					<div
+						class="d-flex flex-column flex-md-row gap-4 justify-content-center align-items-center mt-4"
+					>
+						<div class="rectangle-2 d-none d-lg-block"></div>
+
+						<div
+							class="p-4 shadow-lg card"
+							style="
+								width: 200px;
+								height: 200px;
+								border-radius: 30% 1% 30% 1% / 30% 1% 30% 1%;
+								overflow: hidden;
+								border-top: 5px solid #34d399;
+							"
+						>
+							<div
+								class="shadow-lg p-4"
+								style="border-radius: 60px 8px; width: 80px; height: 80px"
+							>
+								<i class="fas fa-gear fa-lg"></i>
+							</div>
+							<p style="width: 100px" class="fw-semibold mt-2">
+								Perfomance Optimization
+							</p>
+						</div>
+						<div
+							class="p-4 shadow-lg card"
+							style="
+								width: 200px;
+								height: 200px;
+								border-radius: 30% 1% 30% 1% / 30% 1% 30% 1%;
+								overflow: hidden;
+								border-top: 5px solid #34d399;
+							"
+						>
+							<div
+								class="shadow-lg p-4"
+								style="border-radius: 60px 8px; width: 80px; height: 80px"
+							>
+								<i class="fas fa-gear fa-lg"></i>
+							</div>
 							<p style="width: 100px" class="fw-semibold mt-2">
 								Perfomance Optimization
 							</p>
