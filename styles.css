@@ -1,3 +1,8 @@
+html,
+body {
+	width: 100%;
+}
+
 .rectangle {
 	position: absolute;
 	width: 80rem;
@@ -30,9 +35,15 @@
 .benefits-text {
 	/* background-color: #26c499; */
 	width: auto;
-	display: inline-block;
-	padding: 12px 24px;
+	display: inline-block !important;
+	padding: 20px 40px !important;
+	outline: none;
+	border: none;
+	box-shadow: 0 0px 30px 10px rgba(225, 91, 255, 0.306);
+}
 
-	/* border: 10px solid rgba(0, 0, 0, 0.25); */
-	box-shadow: 0 1px 10px 20px rgba(38, 196, 154, 0.363);
+.hero-btn {
+	box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.4);
+	border: none;
+	outline: none;
 }
